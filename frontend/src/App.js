@@ -7,18 +7,19 @@ import Home from './component/Home/Home.jsx'
 import RestaurantDetails from './component/Restaurant/RestaurantDetails.jsx';
 import Cart from './component/Cart/Cart';
 import Profile from './component/Profile/Profile.jsx'
-
+import { CustomerRoute } from './Routers/CustomerRoute';
 function App() {
   return (
       <ThemeProvider theme = {darkTheme}>
         <CssBaseline/>
 
 
-  <Navbar/>
+  {/* <Navbar/> */}
         {/* <Home/> */}
         {/* <RestaurantDetails/> */}
         {/* <Cart/> */}
-        {<Profile/>}
+        {/* {<Profile/>} */}
+        <CustomerRoute/>
         
       </ThemeProvider>
   );
