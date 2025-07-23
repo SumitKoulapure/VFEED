@@ -12,11 +12,14 @@ import AddReactionIcon from '@mui/icons-material/AddReaction';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import { Drawer } from '@mui/material';
 import Divider from '@mui/material/Divider';
+import { useNavigate } from 'react-router-dom';
+
+
 
 
 const menu = [
     {title:"Orders",icon:<ShoppingBagIcon/>},
-    {title:"Favorities",icon:<FavoriteIcon/>},
+    {title:"Favorites",icon:<FavoriteIcon/>},
     {title:"Address",icon:<AddReactionIcon/>},
     {title:"Payment",icon:<AccountBalanceWalletIcon/>},
     {title:"Notification",icon:<NotificationsActiveIcon/>},
@@ -30,6 +33,14 @@ const menu = [
 const ProfileNavigation = ({open,handleClose}) => {
     const isSmallScreen = useMediaQuery('(max-width:900)');
 
+    const navigate = useNavigate();
+
+    const handleNavigate=(item)=>{
+navigate(`/my-profile/${item.title.toLowerCase()}`)
+    }
+
+
+
   return (
     <div>
         <Drawer 
@@ -39,8 +50,8 @@ const ProfileNavigation = ({open,handleClose}) => {
         anchor='left'
         sx={{zIndex:1}}>
             <div className='w=[50vw] lg:w-[20vw] h-[100vh] flex flex-col justify-center items-center text-xl gap-8 pt-16'>
-{menu.map((item,i)=> <>
-<div className='px-5 flex items-center space-x-5 cursor-pointer'>
+{menu.map((item,i)=> (<>
+<div onClick={()=>handleNavigate(item)} className='px-5 flex items-center space-x-5 cursor-pointer'>
     {item.icon}
     <span>{item.title}</span>
 
@@ -49,7 +60,7 @@ const ProfileNavigation = ({open,handleClose}) => {
 {i!== menu.length-1 && <Divider/>}
 
 
-</>)}
+</>))}
             </div>
 
         </Drawer>
