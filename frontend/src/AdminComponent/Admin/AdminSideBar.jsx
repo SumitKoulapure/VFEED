@@ -12,7 +12,8 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Divider from '@mui/material/Divider';
 
 import { useNavigate } from 'react-router-dom';
-import {useDispatch} from 'react-router-dom';
+
+import { useDispatch } from 'react-redux';
 
 const menu=[
         

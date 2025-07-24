@@ -1,10 +1,10 @@
 import React from 'react'
 import FoodCategoryTable from './FoodCategoryTable';
 
-const foodCategory = () => {
+const FoodCategory = () => {
   return (
     <FoodCategoryTable/>
   )
 }
 
-export default foodCategory
+export default FoodCategory
