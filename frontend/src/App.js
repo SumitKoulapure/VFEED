@@ -6,8 +6,11 @@ import { darkTheme } from './Theme/DarkTheme';
 import Home from './component/Home/Home.jsx'
 import RestaurantDetails from './component/Restaurant/RestaurantDetails.jsx';
 import Cart from './component/Cart/Cart';
+
 import Routers from './component/Routers/Routers.jsx';
 
+import Profile from './component/Profile/Profile.jsx'
+import { CustomerRoute } from './Routers/CustomerRoute';
 function App() {
   return (
       <ThemeProvider theme = {darkTheme}>
@@ -15,10 +18,13 @@ function App() {
         <Routers/>
 
 
-  <Navbar/>
-        <Home/>
+  {/* <Navbar/> */}
+        {/* <Home/> */}
         {/* <RestaurantDetails/> */}
-        {/* <Cart/> */}
+        {/* <Cart/> */} 
+        {/* {<Profile/>} */}
+        <CustomerRoute/>
+        
       </ThemeProvider>
   );
 }
