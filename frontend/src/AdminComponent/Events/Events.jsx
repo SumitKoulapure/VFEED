@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CreateRestaurantForm = () => {
+const Events = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const CreateRestaurantForm = () => {
   )
 }
 
-export default CreateRestaurantForm
+export default Events
