@@ -17,7 +17,7 @@ function App() {
   {/* <Navbar/> */}
         {/* <Home/> */}
         {/* <RestaurantDetails/> */}
-        {/* <Cart/> */}
+        {/* <Cart/> */} 
         {/* {<Profile/>} */}
         <CustomerRoute/>
         
