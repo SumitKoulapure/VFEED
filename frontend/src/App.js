@@ -15,13 +15,15 @@ function App() {
   return (
       <ThemeProvider theme = {darkTheme}>
         <CssBaseline/>
-        <Routers/>
+        
 
 
   {/* <Navbar/> */}
         {/* <Home/> */}
         {/* <RestaurantDetails/> */}
-        {/* <Cart/> */} 
+        {/* <Cart/> */}
+        <Routers/>
+
         {/* {<Profile/>} */}
         <CustomerRoute/>
         
