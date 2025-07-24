@@ -12,13 +12,14 @@ function App() {
   return (
       <ThemeProvider theme = {darkTheme}>
         <CssBaseline/>
-        <Routers/>
+        
 
 
   <Navbar/>
         <Home/>
         {/* <RestaurantDetails/> */}
         {/* <Cart/> */}
+        <Routers/>
       </ThemeProvider>
   );
 }
