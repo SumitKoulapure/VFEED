@@ -1,10 +1,7 @@
 import React from 'react'
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import HomeIcon from '@mui/icons-material/Home';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
-import NotificationsIcon from '@mui/icons-material/Notifications';
 import EventIcon from '@mui/icons-material/Event';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useMediaQuery } from '@mui/material';
@@ -31,7 +28,7 @@ const menu = [
 
 
 const ProfileNavigation = ({open,handleClose}) => {
-    const isSmallScreen = useMediaQuery('(max-width:900)');
+    const isSmallScreen = useMediaQuery('(max-width:100px)');
 
     const navigate = useNavigate();
 
