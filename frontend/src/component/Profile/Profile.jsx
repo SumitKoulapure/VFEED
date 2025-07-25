@@ -17,7 +17,7 @@ const Profile = () => {
   const [openSideBar] = useState(false);
   return (
     <div className='lg:flex justify-between'>
-        <div className='sticky h-[80vh] lg:w-[20%]'>
+        <div className='sticky  lg:w-[20%]'> // h-[80vh]
 
             <ProfileNavigation open={openSideBar}/>
         </div>
