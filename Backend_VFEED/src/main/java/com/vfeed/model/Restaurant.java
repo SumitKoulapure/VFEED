@@ -35,6 +35,7 @@ public class Restaurant {
 	private User owner;
 	private String name;
 	private String description;
+	private String cuisineType;
 	@OneToOne
 	private Address address;
 	
