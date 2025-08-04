@@ -39,8 +39,4 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL)
     private List<Address> addresses = new ArrayList<>();
 
-
-
-
-
 }
