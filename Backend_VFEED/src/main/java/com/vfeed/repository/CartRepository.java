@@ -1,13 +1,10 @@
 package com.vfeed.repository;
 
-import java.util.Optional;
-
-
+import com.vfeed.model.Cart;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.vfeed.model.Cart;
+public interface CartRepository extends JpaRepository<Cart,Long> {
+    public Cart findByCustomerId(Long id);
 
-
-public interface CartRepository extends JpaRepository<Cart, Long> {
 
 }
