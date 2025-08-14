@@ -4,11 +4,18 @@ import SearchIcon from '@mui/icons-material/Search';
 import { pink } from '@mui/material/colors';
 import { Avatar } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import PersonIcon from '@mui/icons-material/Person';
+import { useNavigate } from 'react-router-dom';
 import "./Navbar.css"
 
 
 
  export const Navbar = () => {
+
+const navigate = useNavigate();
+
+
+
   return (
     <Box className='px-5 sticky top-0 z-50 py-[.8rem] bg-[#e91e63] lg:px-20 flex justify-between'>
       
@@ -23,9 +30,15 @@ import "./Navbar.css"
                   <SearchIcon sx={{fontSize:"1.5rem"}}/>  
                 </IconButton>
               </div>
-              <div className=''>
-                <Avatar sx={{bgcolor:"white",color:pink.A400}}>C</Avatar>
-              </div>
+<div className=''>
+  {false ? (
+    <Avatar sx={{ bgcolor: "white", color: pink.A400 }}>C</Avatar>
+  ) : (
+    <IconButton onClick={() => navigate("/account/login")}>
+      <PersonIcon/> 
+    </IconButton>
+  )}
+</div>
               <div>
                 <IconButton>
                     <Badge color='secondary' badgeContent = {3}>
